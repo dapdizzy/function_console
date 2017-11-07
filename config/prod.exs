@@ -22,6 +22,13 @@ config :function_console, FunctionConsoleWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :function_console, FunctionConsole.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  # username: "postgres",
+  # password: "postgres",
+  # database: "function_console_prod",
+  pool_size: 15
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
